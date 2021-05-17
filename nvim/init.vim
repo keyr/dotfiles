@@ -14,8 +14,6 @@ set smartindent " automatically inserts one extra level of insertion
 
 " remappings
 inoremap jk <ESC>
-nnoremap <C-p> :GFiles<Cr>
-nnoremap <C-g> :Rg<Cr>
 " Vim plugins
 set rtp +=~/.vim
 call plug#begin('~/.vim/autoload')
@@ -23,15 +21,8 @@ call plug#begin('~/.vim/autoload')
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'itchyny/lightline.vim'
 
-" Grep
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
 " LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Highlighting
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Misc
 Plug 'alvan/vim-closetag'
@@ -63,13 +54,3 @@ let g:closetag_regions = {
     \ 'javascriptreact': 'jsxRegion',
     \ }
 let g:closetag_shortcut = '>'
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-    highlight = {
-        enable = true,
-    },
-    incremental_selection = {
-        enable = false,
-    },
-}
-EOF
