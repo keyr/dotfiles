@@ -14,12 +14,18 @@ set smartindent " automatically inserts one extra level of insertion
 
 " remappings
 inoremap jk <ESC>
+nnoremap <C-p> :GFiles<Cr>
+nnoremap <C-g> :Rg<Cr>
 " Vim plugins
 set rtp +=~/.vim
 call plug#begin('~/.vim/autoload')
 " Color scheme / aesthetic
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'itchyny/lightline.vim'
+
+" Grep
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
