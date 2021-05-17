@@ -30,9 +30,6 @@ Plug 'junegunn/fzf.vim'
 " LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Highlighting
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
 " Misc
 Plug 'alvan/vim-closetag'
 Plug 'psliwka/vim-smoothie'
@@ -63,13 +60,3 @@ let g:closetag_regions = {
     \ 'javascriptreact': 'jsxRegion',
     \ }
 let g:closetag_shortcut = '>'
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-    highlight = {
-        enable = true,
-    },
-    incremental_selection = {
-        enable = false,
-    },
-}
-EOF
