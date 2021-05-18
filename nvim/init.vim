@@ -23,6 +23,10 @@ call plug#begin('~/.vim/autoload')
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'itchyny/lightline.vim'
 
+" Motion
+Plug 'unblevable/quick-scope'
+Plug 'justinmk/vim-sneak'
+
 " Grep
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
